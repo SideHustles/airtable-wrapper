@@ -1,0 +1,7 @@
+node_modules
+public/studio
+.vercel
+.env.development
+.env
+.next
+.DS_Store
