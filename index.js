@@ -1,5 +1,3 @@
-import { AirtableWrapper } from './lib/airtable'
+const wrapper = require('./lib/airtable')
 
-export {
-  AirtableWrapper
-}
+export default wrapper
