@@ -1,3 +1,1 @@
-const wrapper = require('./lib/airtable')
-
-export default wrapper
+module.exports = require('./lib/airtable')
