@@ -37,7 +37,7 @@ const { find, findById } = airtable
 
 ### Include referenced data
 
-Records are returned with the ID of the referenced item, for example 
+Records are returned with the ID of the referenced item, for example:
 
 ```
 {
@@ -56,6 +56,19 @@ To fetch the referenced item instead of just the ID, specify an `include` argume
     include: [{ collection: 'roasters', property: 'Roaster' }]
   })
 })()
+
+/*
+ * {
+ *   "Title": "House Blend",
+ *   "Roaster": [
+ *     {
+ *       "id": "zed465rth1212scbg",
+ *       "name": "Red Rooster"
+ *     }
+ *   ]
+ * }
+ */
+
 ```
 
 ## License
