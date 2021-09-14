@@ -8,7 +8,10 @@ npm i airtable-wrapper
 
 ## Usage
 
-You'll need an Airtable API key and the ID of the base you want to access. Find the base ID by browsing to https://airtable.com/api and selecting a base. This will take you to the API documentation for your base.
+You'll need an Airtable API key and the ID of the base you want to access:
+
+ * Visit your account page to create an API token.
+ * Find the base ID by browsing to https://airtable.com/api and selecting a base. This will take you to the API documentation for your base.
 
 ### Initialising
 
@@ -70,6 +73,29 @@ To fetch the referenced item instead of just the ID, specify an `include` argume
  */
 
 ```
+
+### Delete a record
+
+```
+;(async () => {
+  const results = await delete({ tableName: 'coffee', ids: ['zedfrthyfdscbg'] })
+})()
+```
+
+### Update a record
+
+```
+;(async () => {
+  const updatedRecord = await update({
+    tableName: 'coffee',
+    id: 'zedfrthyfdscbg',
+    update: {
+      Roaster: ["z3d4g5rty1814scaf"]
+    }
+  })
+})()
+```
+
 
 ## License
 
